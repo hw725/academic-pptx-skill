@@ -1,7 +1,18 @@
 ---
-name: academic-pptx
-description: "Use this skill whenever the user wants to create or improve a presentation for an academic context — conference papers, seminar talks, thesis defenses, grant briefings, lab meetings, invited lectures, or any presentation where the audience will evaluate reasoning and evidence. Triggers include: 'conference talk', 'seminar slides', 'thesis defense', 'research presentation', 'academic deck', 'academic presentation'. Also triggers when the user asks to 'make slides' in combination with academic content (e.g., 'make slides for my paper on X', 'create a presentation for my dissertation defense', 'build a deck for my grant proposal'). This skill governs CONTENT and STRUCTURE decisions. For the technical work of creating or editing the .pptx file itself, also read the pptx SKILL.md."
-license: Proprietary. LICENSE.txt has complete terms
+name: academic-pptx-skill
+description: "학술 발표 슬라이드(학회 발표·세미나·논문 심사·연구비 브리핑·초청 강연)의 내용·논증 구조·인용 규범을 정할 때 쓴다 — action title(완결문 제목), 근거→주장 순서, 결론 슬라이드 고정. Trigger: 학회 발표 슬라이드, 세미나 자료, 논문 발표 덱, conference talk, thesis defense, research presentation, 「내 논문으로 슬라이드 만들어」. 이 스킬은 내용·구조만 담당하고 .pptx 파일 생성·편집은 anthropic pptx 스킬이 맡는다 — 둘 다 읽는다. 학술 아닌 발표는 해당 없음."
+license: MIT
+metadata:
+  author: Gabberflast
+  version: 1.0.0
+  category: writing
+  upstream: https://github.com/Gabberflast/academic-pptx-skill @ 9f2b703ffe8d1449851617665ab1ffb3516d54ac
+  local_divergence: |
+    frontmatter 세 줄만 로컬: name 을 폴더명(academic-pptx-skill)으로, description 을 한국어
+    트리거로, license 줄을 저장소 LICENSE 파일(MIT 원문)에 맞췄다 — upstream frontmatter 는
+    「Proprietary. LICENSE.txt has complete terms」라 적혀 있으나 그 파일은 없고 LICENSE 가 MIT 다.
+    본문·content_guidelines.md·slide_patterns.md 는 upstream verbatim. 동봉 PDF 는 가져오지 않았다.
+    AUD-20260920-102848-edcc72b9 (install-candidate).
 ---
 
 # Academic Presentations Skill
